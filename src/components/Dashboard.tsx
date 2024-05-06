@@ -8,8 +8,10 @@ import Link from "next/link"
 import { format } from 'date-fns'
 import { Button } from "./ui/button"
 import { useState } from "react"
+import { useToast } from "./ui/use-toast"
 
 const Dashboard = () => {
+    const {toast} = useToast()
 
     const [currentlyDeletingFile, setcurrentlyDeletingFile] = useState<string | null>(null)
 
